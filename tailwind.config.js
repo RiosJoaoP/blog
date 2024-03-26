@@ -28,7 +28,6 @@ module.exports = {
         primary: colors.indigo,
         gray: colors.neutral,
       },
-      // #0c0c0d
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
