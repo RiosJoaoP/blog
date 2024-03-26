@@ -7,10 +7,9 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'DEMIBAV Project',
-    description: `Demonstrator of Molds for the Injection of Low-Volume Plastic Parts.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'DEMIBAV - Gitec',
+    description: `Aim to reduce injection mold costs by employing steel insert gates - a permanent component - with inserts manufactured through additive manufacturing using low-cost materials, and inserts through machining of low-cost metallic alloy (e.g., Aluminum, ZAMAC, etc.) - a replaceable component.`,
+    imgSrc: '/static/images/gitec.jpeg',
   },
 ]
 
