@@ -1,9 +1,9 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: "RiosJoaoP's Portfolio",
+  title: "RiosJoaoP's Blog",
   author: 'João Paulo Rios',
   headerTitle: 'RiosJoaoP',
-  description: 'This is my personal Data Science portfolio made with Next.js and Tailwind.css',
+  description: 'This is my personal technology blog made with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://riosjoaop.com',
