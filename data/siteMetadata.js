@@ -7,7 +7,7 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://riosjoaop.com',
-  siteRepo: 'https://github.com/RiosJoaoP/portfolio',
+  siteRepo: 'https://github.com/RiosJoaoP/riosjoaop.tech',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',
