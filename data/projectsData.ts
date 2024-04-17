@@ -1,4 +1,5 @@
 interface Project {
+  type: 'work' | 'personal'
   title: string
   description: string
   href?: string
@@ -7,10 +8,19 @@ interface Project {
 
 const projectsData: Project[] = [
   {
+    type: 'work',
     title: 'DEMIBAV - Gitec',
-    description: `Aim to reduce injection mold costs by employing steel insert gates - a permanent component - with inserts manufactured through additive manufacturing using low-cost materials, and inserts through machining of low-cost metallic alloy (e.g., Aluminum, ZAMAC, etc.) - a replaceable component.`,
+    description: `Developing a Data Acquisition System (DAQ) for injection molding machines using microcontrollers and industrial sensors, such as thermocouples, load cells and extensometers to provide real-time data on the injection molding process.
+
+    `,
     imgSrc: '/static/images/projects/gitec.jpeg',
   },
+  // {
+  //   type: 'personal',
+  //   title: 'Chameleon Lamp',
+  //   description: `In Progress`,
+  //   imgSrc: '/static/images/projects/gitec.jpeg',
+  // },
 ]
 
 export default projectsData

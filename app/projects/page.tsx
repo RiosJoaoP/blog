@@ -5,6 +5,9 @@ import { genPageMetadata } from 'app/seo'
 export const metadata = genPageMetadata({ title: 'Projects' })
 
 export default function Projects() {
+  const workProjects = projectsData.filter(({ type }) => type === 'work')
+  const personalProjects = projectsData.filter(({ type }) => type === 'personal')
+
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -16,19 +19,42 @@ export default function Projects() {
             Check out what I've been working on lately!
           </p>
         </div>
-        <div className="container py-12">
-          <div className="-m-4 flex flex-wrap">
-            {projectsData.map((d) => (
-              <Card
-                key={d.title}
-                title={d.title}
-                description={d.description}
-                imgSrc={d.imgSrc}
-                href={d.href}
-              />
-            ))}
+        {workProjects.length > 0 ? (
+          <div className="container py-12">
+            <h3 className="mb-4 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100">
+              Work
+            </h3>
+            <div className="-m-4 flex flex-wrap">
+              {workProjects.map((d) => (
+                <Card
+                  key={d.title}
+                  title={d.title}
+                  description={d.description}
+                  imgSrc={d.imgSrc}
+                  href={d.href}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        ) : null}
+        {personalProjects.length > 0 ? (
+          <div className="container py-12">
+            <h3 className="mb-4 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100">
+              Personal
+            </h3>
+            <div className="-m-4 flex flex-wrap">
+              {personalProjects.map((d) => (
+                <Card
+                  key={d.title}
+                  title={d.title}
+                  description={d.description}
+                  imgSrc={d.imgSrc}
+                  href={d.href}
+                />
+              ))}
+            </div>
+          </div>
+        ) : null}
       </div>
     </>
   )
