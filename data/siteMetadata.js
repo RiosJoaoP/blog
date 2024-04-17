@@ -6,7 +6,7 @@ const siteMetadata = {
   description: 'This is my personal technology blog made with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://riosjoaop.com',
+  siteUrl: 'https://riosjoaop.tech',
   siteRepo: 'https://github.com/RiosJoaoP/riosjoaop.tech',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
