@@ -3,7 +3,8 @@ const siteMetadata = {
   title: "RiosJoaoP's Blog",
   author: 'João Paulo Rios',
   headerTitle: 'RiosJoaoP',
-  description: 'This is my personal technology blog made with Next.js and Tailwind.css',
+  description:
+    "This is where I share my Computer Engineering journey, and you're invited to join me!",
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://riosjoaop.tech',
