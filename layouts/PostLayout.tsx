@@ -30,7 +30,7 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags } = content
+  const { filePath, path, slug, date, title, tags, readingTime } = content
   const basePath = path.split('/')[0]
 
   return (
@@ -42,11 +42,19 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
-                  <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  <dt className="sr-only inline">Published on</dt>
+                  <dd className="inline text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                     </time>
+                  </dd>
+                  <span className="inline text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                    {' '}
+                    &#x2022;{' '}
+                  </span>
+                  <dt className="sr-only inline">Reading time</dt>
+                  <dd className="inline text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                    <span>{readingTime.text}</span>
                   </dd>
                 </div>
               </dl>

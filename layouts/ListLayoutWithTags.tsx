@@ -122,14 +122,22 @@ export default function ListLayoutWithTags({
           <div>
             <ul>
               {displayPosts.map((post) => {
-                const { path, date, title, summary, tags } = post
+                const { path, date, title, summary, tags, readingTime } = post
                 return (
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <dl>
                         <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                        <dd className="inline text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                           <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                        </dd>
+                        <span className="inline text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                          {' '}
+                          &#x2022;{' '}
+                        </span>
+                        <dt className="sr-only inline">Reading time</dt>
+                        <dd className="inline text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                          <span>{readingTime.text}</span>
                         </dd>
                       </dl>
                       <div className="space-y-3">
